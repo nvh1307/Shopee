@@ -1,0 +1,42 @@
+:root{
+    --text-color:#333;
+
+}
+
+*{
+    box-sizing: inherit;
+}
+html{
+    font-size: 62.5%; /* hack */
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box; /*Box sizing là border box nhưng thẻ * để inherit để các element kế thừa lại thẻ * */
+
+}
+.grid{
+    width: 1200px;
+    max-width: 100%; /* nếu màn hình máy tính nhỏ hơn 1200px sẽ tự động bé lại để 
+    phù hợp với cả màn hình máy tính đang sử dụng*/
+    margin: 0 auto; /* tự động căn giữa khối này khi nó nằm trong một cái khối khác*/
+
+
+}
+.grid__full-width{
+    width: 100%; /* để trong trường hợp không muốn sử dụng width là 1200px*/
+
+}
+
+.grid__row{
+    display: flex;
+    flex-wrap: wrap; /* Những thẻ mà nằm trong class này sẽ nằm cùng trên một hàng ngang và 
+    tổng độ dài của những thành phần con của class này sẽ tự động xuống dòng khi vượt
+    quá độ dài width của class*/
+}
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
